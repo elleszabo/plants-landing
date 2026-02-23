@@ -53,9 +53,9 @@ export default function UploadButton({
         });
 
       if (uploadError) {
-        // If bucket doesn't exist or permissions issue, still redirect with no photo
         console.error("Upload error:", uploadError);
-        window.location.href = `${APP_URL}/welcome`;
+        setError("Upload failed. Please try again.");
+        setUploading(false);
         return;
       }
 
