@@ -1,26 +1,29 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Space_Grotesk, Instrument_Serif } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-sans",
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-serif",
   subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
-  title: "theai.garden — Stop Killing Your Plants",
+  title: "Stop Killing Your Plants — stopkillingplants.xyz",
   description:
     "Upload a photo. Get a care plan in 10 seconds. Personalized plant care powered by AI.",
   openGraph: {
-    title: "theai.garden — Stop Killing Your Plants",
+    title: "Stop Killing Your Plants",
     description: "Upload a photo. Get a care plan in 10 seconds.",
-    url: "https://theai.garden",
-    siteName: "theai.garden",
+    url: "https://stopkillingplants.xyz",
+    siteName: "stopkillingplants.xyz",
     type: "website",
   },
 };
@@ -33,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0a0a0a] text-[#ededed]`}
+        className={`${spaceGrotesk.variable} ${instrumentSerif.variable} antialiased bg-[#060606] text-[#ededed]`}
       >
         <div className="noise-overlay" />
         {children}
