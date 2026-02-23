@@ -55,7 +55,7 @@ export default function UploadButton({
       if (uploadError) {
         // If bucket doesn't exist or permissions issue, still redirect with no photo
         console.error("Upload error:", uploadError);
-        window.location.href = `${APP_URL}/photo`;
+        window.location.href = `${APP_URL}/welcome`;
         return;
       }
 
@@ -64,9 +64,9 @@ export default function UploadButton({
         .from("plant-photos")
         .getPublicUrl(filePath);
 
-      // Redirect to theai.garden/photo with the uploaded image path
-      const redirectUrl = new URL(`${APP_URL}/photo`);
-      redirectUrl.searchParams.set("image", urlData.publicUrl);
+      // Redirect to theai.garden/welcome with the uploaded image
+      const redirectUrl = new URL(`${APP_URL}/welcome`);
+      redirectUrl.searchParams.set("photoUrl", urlData.publicUrl);
       redirectUrl.searchParams.set("from", "landing");
 
       window.location.href = redirectUrl.toString();
