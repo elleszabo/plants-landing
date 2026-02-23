@@ -21,16 +21,17 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-[radial-gradient(circle,rgba(255,32,32,0.06)_0%,transparent_60%)] pointer-events-none" />
         <div className="absolute top-1/4 right-0 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(34,197,94,0.03)_0%,transparent_60%)] pointer-events-none" />
 
-        <div className="relative z-10 max-w-6xl mx-auto w-full">
+        <div className="relative z-10 max-w-6xl mx-auto w-full text-center">
           {/* Top label */}
-          <div className="flex items-center gap-4 mb-12 md:mb-16">
+          <div className="flex items-center justify-center gap-4 mb-12 md:mb-16">
             <div className="accent-line" />
             <span className="text-xs font-medium tracking-[0.3em] uppercase text-[#555]">
               Plant care, finally personalized
             </span>
+            <div className="accent-line" />
           </div>
 
-          {/* Main headline — left aligned for editorial feel */}
+          {/* Main headline */}
           <h1 className="hero-title mb-8 md:mb-10">
             Stop <span className="kill-word">killing</span>
             <br />
@@ -38,7 +39,7 @@ export default function Home() {
           </h1>
 
           {/* Subheadline — serif italic contrast */}
-          <div className="max-w-lg ml-0 md:ml-4 mb-12">
+          <div className="max-w-lg mx-auto mb-12">
             <p className="font-serif text-2xl md:text-3xl text-[#999] leading-snug">
               Upload a photo.<br />
               Get a care plan in <span className="text-white">10 seconds</span>.
@@ -46,7 +47,7 @@ export default function Home() {
           </div>
 
           {/* CTA cluster */}
-          <div className="flex flex-col sm:flex-row items-start gap-5 ml-0 md:ml-4">
+          <div className="flex flex-col items-center gap-5">
             <UploadButton className="btn-glow px-10 py-4 rounded-full text-sm">
               <span className="flex items-center gap-3">
                 Upload Plant Photo
