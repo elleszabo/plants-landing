@@ -32,7 +32,7 @@ body {
 
 .hero-title {
   font-family: var(--font-sans), "Space Grotesk", system-ui, sans-serif;
-  font-size: clamp(4rem, 14vw, 12rem);
+  font-size: clamp(3rem, 9vw, 7.5rem);
   font-weight: 700;
   line-height: 0.85;
   letter-spacing: -0.05em;

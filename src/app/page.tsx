@@ -32,13 +32,9 @@ export default function Home() {
 
           {/* Main headline — left aligned for editorial feel */}
           <h1 className="hero-title mb-8 md:mb-10">
-            Stop
+            Stop <span className="kill-word">killing</span>
             <br />
-            <span className="kill-word">killing</span>
-            <br />
-            <span className="text-[#888]">your</span>
-            <br />
-            plants<span className="text-[#ff2020]">.</span>
+            <span className="text-[#888]">your</span> plants<span className="text-[#ff2020]">.</span>
           </h1>
 
           {/* Subheadline — serif italic contrast */}
